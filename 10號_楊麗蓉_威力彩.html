@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        let areaA = [];
+        while (areaA.length < 6) {
+            let num = Math.floor(Math.random() * 38) + 1;
+
+            if (!areaA.includes(num)) {
+                areaA.push(num);
+            }
+        }
+
+        //  A 區數字
+        areaA.sort((a, b) => a - b);
+
+        // B 區：1~8 取 1 個數字
+        let areaB = Math.floor(Math.random() * 8) + 1;
+
+        // 使用 document.write 顯示結果
+        document.write("<h2>樂透隨機開獎結果</h2>");
+        document.write("<p><strong>A 區 (1~38)：</strong>" + areaA.join(", ") + "</p>");
+        document.write("<p><strong>B 區 (1~8)：</strong>" + areaB + "</p>");
+    </script>
+
+
+</body>
+
+</html>
